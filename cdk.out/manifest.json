@@ -1,0 +1,399 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "FargateSsmBastionStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FargateSsmBastionStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FargateSsmBastionStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FargateSsmBastionStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3352513ecafce5c4b261eeea8219110541de611e8525d96b905ba40c87482468.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FargateSsmBastionStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FargateSsmBastionStack.assets"
+      ],
+      "metadata": {
+        "/FargateSsmBastionStack/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1SubnetB4246D30"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableFEE4B781"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableAssociation0B0896DC"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1DefaultRoute91CEF279"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2Subnet74179F39"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTable6F1A15F1"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTableAssociation5A808732"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2DefaultRouteB7481BBA"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1Subnet8BCA10E0"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableBE8A6027"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableAssociation347902D1"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2SubnetCFCDAA7A"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTable0A19E10E"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTableAssociation0C73D413"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCRestrictDefaultSecurityGroupCustomResource59474679"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/ecr-endpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCecrendpointSecurityGroupE52E39D5"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/ecr-endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCecrendpoint68FFA464"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/ecr-dkr-endpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCecrdkrendpointSecurityGroup707BE8F0"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/ecr-dkr-endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCecrdkrendpoint77EC2384"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/logs-endpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPClogsendpointSecurityGroupD6821998"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/logs-endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPClogsendpoint82F961E6"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/s3-endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCs3endpoint8822E27D"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/SSMEndpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCSSMEndpointSecurityGroup242B411E"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/SSMEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCSSMEndpoint80026734"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/SSMMessagesEndpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCSSMMessagesEndpointSecurityGroup9FC68F2D"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/SSMMessagesEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCSSMMessagesEndpoint8932ABBF"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/EC2MessagesEndpoint/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCEC2MessagesEndpointSecurityGroup6B466859"
+          }
+        ],
+        "/FargateSsmBastionStack/VPC/EC2MessagesEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCEC2MessagesEndpointFBEB5B48"
+          }
+        ],
+        "/FargateSsmBastionStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/FargateSsmBastionStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/Subnets/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreSubnets209204DA"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreSecurityGroupD8D36D55"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/SecurityGroup/from FargateSsmBastionStackBastionHostSGEEC199C5:5432": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreSecurityGroupfromFargateSsmBastionStackBastionHostSGEEC199C554328547CF59"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreSecret1AFB5ACB"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreSecretAttachment48BF481C"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgre0D8C8436"
+          }
+        ],
+        "/FargateSsmBastionStack/AuroraPostgre/Instance1": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraPostgreInstance12B01E5F3"
+          }
+        ],
+        "/FargateSsmBastionStack/BastionCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionCluster954FE31C"
+          }
+        ],
+        "/FargateSsmBastionStack/BastionCluster/BastionCluster": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionCluster23048EB6"
+          }
+        ],
+        "/FargateSsmBastionStack/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskRole30FC0FBB"
+          }
+        ],
+        "/FargateSsmBastionStack/TaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskRoleDefaultPolicy07FC53DE"
+          }
+        ],
+        "/FargateSsmBastionStack/EcsTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsTaskExecutionRoleC0B6A84D"
+          }
+        ],
+        "/FargateSsmBastionStack/EcsTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsTaskExecutionRoleDefaultPolicyDCEEFDC3"
+          }
+        ],
+        "/FargateSsmBastionStack/bastion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastion34F27305"
+          }
+        ],
+        "/FargateSsmBastionStack/BastionHostSG": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Ignoring Egress rule since 'allowAllOutbound' is set to true; To add customized rules, set allowAllOutbound=false on the SecurityGroup",
+            "trace": [
+              "Annotations.addMessage (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1071)",
+              "Annotations.addWarning (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/core/lib/annotations.js:1:504)",
+              "SecurityGroup.addEgressRule (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/security-group.js:1:7237)",
+              "/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1747",
+              "ReactiveList.forEachAndForever (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5789)",
+              "/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1708",
+              "ReactiveList.forEachAndForever (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5789)",
+              "Connections.allowTo (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:1636)",
+              "new FargateSsmBastionStack (/home/ec2-user/environment/fargate-ssm-bastion/lib/fargate-ssm-bastion-stack.ts:151:28)",
+              "Object.<anonymous> (/home/ec2-user/environment/fargate-ssm-bastion/bin/fargate-ssm-bastion.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1198:14)",
+              "Module.m._compile (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1252:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1076:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:911:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "phase4 (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/ec2-user/environment/fargate-ssm-bastion/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1198:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)",
+              "Module.load (node:internal/modules/cjs/loader:1076:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:911:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:22:47"
+            ]
+          }
+        ],
+        "/FargateSsmBastionStack/BastionHostSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostSG7EC1B225"
+          }
+        ],
+        "/FargateSsmBastionStack/bastion-service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionserviceService7543A985"
+          }
+        ],
+        "/FargateSsmBastionStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FargateSsmBastionStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FargateSsmBastionStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FargateSsmBastionStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FargateSsmBastionStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
