@@ -1,14 +1,38 @@
-# Welcome to your CDK TypeScript project
+# FargateとSystems Manager ポートフォワーディングによるサーバレス踏み台
 
-This is a blank project for CDK development with TypeScript.
+※[AWSの公式ブログ](https://aws.amazon.com/jp/blogs/news/use-port-forwarding-in-aws-systems-manager-session-manager-to-connect-to-remote-hosts-jp/)
+の内容をFargateで実現するためのアセットをCDKで一括セットアップするためのサンプルコードです。  
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## アーキテクチャイメージ
 
-## Useful commands
+![全体のアーキテクチャ図](./images/architecture.png)
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## デプロイ準備
+
+上記のリソースをAWSにデプロイする方法をまとめます。
+デプロイを実行する端末には、下記のソフトウェアが必要です。
+
+- AWS CLI v2
+- Node.js 14以上
+- Docker
+
+```shell
+# CDKプロジェクト配下に移動
+cd infra
+
+# IaCの依存関係をインストール
+npm ci
+
+# CDKをデプロイ先のリージョンで使えるように初期化する（以下コマンドはap-northeast-1の例）
+AWS_REGION=ap-northeast-1 npx cdk bootstrap
+```
+## デプロイ手順
+
+**エラーとなった場合はコマンドを実行しているディレクトリが正しいことを確認してください**
+
+```shell
+# cdk-stackのデプロイ
+npx cdk deploy  --require-approval never
+```
+
+## 以降作成中
